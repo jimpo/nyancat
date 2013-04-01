@@ -17,7 +17,8 @@ nyan = (function() {
     function createImgElement() {
         img = document.createElement('img');
         img.src = IMG_SRC;
-        img.style['width'] = 200;
+        img.style['width'] = '200px';
+        img.style['z-index'] = '100';
         img.style['position'] = 'absolute';
         img.style['left'] = 0;
         img.style['top'] = 0;
@@ -67,12 +68,12 @@ nyan = (function() {
         var d = Math.sqrt(dx * dx + dy * dy);
         var step = speed();
         if (d <= step) {
-            img.style['left'] = targetX;
-            img.style['top']  = targetY;
+            img.style['left'] = targetX + 'px';
+            img.style['top']  = targetY + 'px';
         }
         else {
-            img.style['left'] = posX() + dx * step / d;
-            img.style['top']  = posY() + dy * step / d;
+            img.style['left'] = posX() + dx * step / d + 'px';
+            img.style['top']  = posY() + dy * step / d + 'px';
         }
     }
 
