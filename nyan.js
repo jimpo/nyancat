@@ -19,7 +19,7 @@ nyan = (function() {
         img.src = IMG_SRC;
         img.style['width'] = '200px';
         img.style['z-index'] = '100';
-        img.style['position'] = 'absolute';
+        img.style['position'] = 'fixed';
         img.style['left'] = 0;
         img.style['top'] = 0;
     }
